@@ -147,25 +147,42 @@ http://www.tooplate.com/view/2098-health
   }
 
   .news-thumb {
-    background: #ffffff;
+    height: 100%; /* Đảm bảo thẻ cha có chiều cao đầy đủ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px;
     border-radius: 10px;
-  }
-  .news-thumb img {
-    border-radius: 10px 10px 0 0;
-  }
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .news-info {
-    padding: 30px;
-    text-align: left;
-  }
-  .news-info span {
-    display: block;
-    letter-spacing: 0.5px;
-  }
-  .news-info h3 {
+.news-thumb a img {
+    width: 100%;      /* Đảm bảo ảnh full chiều rộng */
+    height: 250px;    /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover; /* Cắt ảnh để vừa khung mà không méo */
+    border-radius: 10px;
+}
+
+.news-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin-top: 10px;
-    margin-bottom: 10px;
-  }
+}
+
+.news-info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.news-info p {
+    font-size: 14px;
+    color: #666;
+}
+
 
   .author {
     border-top: 1px solid #f0f0f0;
